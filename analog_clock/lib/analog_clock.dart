@@ -132,7 +132,10 @@ class _AnalogClockState extends State<AnalogClock> {
         value: time,
       ),
       child: Container(
-        color: customTheme.backgroundColor,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: customTheme.backgroundColor,
+        ),
         child: Stack(
           children: [
             // Example of a hand drawn with [CustomPainter].
@@ -162,6 +165,21 @@ class _AnalogClockState extends State<AnalogClock> {
                   decoration: BoxDecoration(
                     color: customTheme.primaryColor,
                   ),
+                ),
+              ),
+            ),
+            Center(
+              child: Container(
+                width: 20,
+                height: 20,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.blueGrey,
+                ),
+                child: Icon(
+                  Icons.wb_sunny,
+                  color: Colors.white,
+                  size: 19
                 ),
               ),
             ),
